@@ -1,4 +1,4 @@
-1 Write a program to accept a message as input from the user and print it
+1 Write a program to display the given output
 Sample Output 
 Hello World
 2 Print the statement using concatenation
@@ -15,3 +15,18 @@ Sample Input 1 2 3
 Sample Output 1 2 3  
 9 Write a program to print your gmail using string without function concatenation
 10 Write a program to print the double number using concatenation
+11 What is the value of ASCII and print the character
+12 What is the Character for given ASCII value 
+13 Write a program to accept a float value as input from the user and print integer value.
+Sample Input 3.142
+Sample Output 3
+14 Write a program to accept 2 numbers as input from the user. Print the 2 numbers such that the second number is 17 width spaces away from the first.
+Sample Input 25 35
+Sample Output
+2500000000000000035
+15 Write a program to accept a float value and an integer as input. The integer represents the precision. Print the float value according to the precision.
+Sample Input 123.4567	2
+Sample Output 123.46
+ 
+ 
+
