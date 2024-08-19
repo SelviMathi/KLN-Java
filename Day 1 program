@@ -1,0 +1,14 @@
+1 Write a JAVA program to accept integer input and display it
+2 Write a JAVA program to accept char input and display it
+3 Write a JAVA program to accept float input and display it
+4 Write a JAVA program to accept double input and display it
+5 Write a JAVA program to accept bool input and display it
+6 Write a program to accept a message as input from the user and print it
+Sample Output 
+Hello World
+7 Write a program to accept multiple inputs in a line and display it
+Sample Input 1 2 3 
+Sample Output 1 2 3  
+8 Write a program to accept a character as input from the user and print its corresponding ASCII value.
+Sample Input A
+Sample Output 65
