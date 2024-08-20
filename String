@@ -1,0 +1,10 @@
+1.Print each character in newline from given string
+2.Print ASCII value for each character in given string
+3.Print only UPPERCASE of character in given string
+4.Print only lowercase of character in given  string
+5.print Alphabet count in given string
+6.Print Count of UPPER & lower case of given String
+7.Create a new string containing only UPPERCASE from given string
+8.Create a new string with digits followed by letters from given string
+9.Create a new string after removing all spaces in given string
+10.Reverse the case of each character in given string
