@@ -1,0 +1,333 @@
+1	Write a program to add two numbers using type casting
+
+public class AddTwoNumbers {
+    public static void main(String[] args) {
+        int num1 = 5;
+        double num2 = 6.5;
+        int sum = num1 + (int) num2;  // Type casting double to int
+        System.out.println("The sum is: " + sum);
+    }
+}
+
+2	Write a program to find the difference b/w two double numbers 
+
+public class DifferenceBetweenDoubles {
+    public static void main(String[] args) {
+        double num1 = 8.75;
+        double num2 = 4.25;
+        double difference = num1 - num2;
+        System.out.println("The difference is: " + difference);
+    }
+}
+
+
+3 Write a program to display the first and the last digit of a 5 digit number entered from the keyboard.
+Sample Input 87235
+Sample Output 8 5
+
+import java.util.Scanner;
+
+public class FirstAndLastDigit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a 5-digit number: ");
+        int number = scanner.nextInt();
+
+        int firstDigit = number / 10000;
+        int lastDigit = number % 10;
+
+        System.out.println("First digit: " + firstDigit);
+        System.out.println("Last digit: " + lastDigit);
+    }
+}
+
+4 If the marks of Robert in three subjects are given (each out of 100 ), write a program to calculate his total marks and percentage marks.
+Sample Input 67 98 34
+Sample Output 199 66.33%
+
+import java.util.Scanner;
+
+public class MarksCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter marks for three subjects: ");
+        int marks1 = scanner.nextInt();
+        int marks2 = scanner.nextInt();
+        int marks3 = scanner.nextInt();
+
+        int totalMarks = marks1 + marks2 + marks3;
+        double percentage = (totalMarks / 3.0);
+
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.printf("Percentage Marks: %.2f%%\n", percentage);
+    }
+}
+
+
+
+5 Write a program to enter a 4 digit number from keyboard. Add 8 to the number and then divide it by 3. Now, the modulus of that number is taken with 5 and then multiply the resultant value by 5. Display the final result.
+Sample Input 3625
+Sample Output 5.000000
+
+import java.util.Scanner;
+
+public class FourDigitOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a 4-digit number: ");
+        int number = scanner.nextInt();
+
+        int result = (((number + 8) / 3) % 5) * 5;
+        System.out.printf("Final result: %.6f", (double) result);
+    }
+}
+
+
+6 Write a program to convert specified days into years, weeks and days.
+Sample Input 
+1329
+Sample Output 
+Years: 3                                                               
+Weeks: 33
+Days:3
+
+
+import java.util.Scanner;
+
+public class DaysConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of days: ");
+        int days = scanner.nextInt();
+
+        int years = days / 365;
+        int remainingDays = days % 365;
+        int weeks = remainingDays / 7;
+        remainingDays = remainingDays % 7;
+
+        System.out.println("Years: " + years);
+        System.out.println("Weeks: " + weeks);
+        System.out.println("Days: " + remainingDays);
+    }
+}
+
+7 Write a Java program that accepts two integers from the user and prints the sum, the difference, the product, the average, the distance (the difference between the integers), the maximum (the largest of the two integers), and the minimum (the smallest of the two integers).
+Test Data
+Input 1st integer: 25
+Input 2nd integer: 5
+Expected Output :
+Sum of two integers: 30
+Difference of two integers: 20
+Product of two integers: 125
+Average of two integers: 15.00
+Distance of two integers: 20
+Max integer: 25
+Min integer: 5
+
+import java.util.Scanner;
+
+public class TwoIntegersOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input 1st integer: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Input 2nd integer: ");
+        int num2 = scanner.nextInt();
+
+        int sum = num1 + num2;
+        int difference = Math.abs(num1 - num2);
+        int product = num1 * num2;
+        double average = (num1 + num2) / 2.0;
+        int max = Math.max(num1, num2);
+        int min = Math.min(num1, num2);
+
+        System.out.println("Sum of two integers: " + sum);
+        System.out.println("Difference of two integers: " + difference);
+        System.out.println("Product of two integers: " + product);
+        System.out.println("Average of two integers: " + average);
+        System.out.println("Distance of two integers: " + difference);
+        System.out.println("Max integer: " + max);
+        System.out.println("Min integer: " + min);
+    }
+}
+
+
+8 Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer.
+Test Data
+Input an integer between 0 and 1000: 565
+Expected Output :
+The sum of all digits in 565 is 16
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input an integer between 0 and 1000: ");
+        int number = scanner.nextInt();
+
+        int sum = 0;
+        while (number != 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+
+        System.out.println("The sum of all digits is: " + sum);
+    }
+}
+
+9 Write a Java program to take the user for a distance (in meters) and the time taken (as three numbers: hours, minutes, seconds), and display the speed, in meters per second, kilometers per hour and miles per hour (hint: 1 mile = 1609 meters).
+Test Data
+Input distance in meters: 2500
+Input hour: 5
+Input minutes: 56
+Input seconds: 23
+Expected Output :
+Your speed in meters/second is 0.11691531
+Your speed in km/h is 0.42089513
+Your speed in miles/h is 0.26158804
+
+import java.util.Scanner;
+
+public class SpeedCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input distance in meters: ");
+        int distance = scanner.nextInt();
+
+        System.out.print("Input hours: ");
+        int hours = scanner.nextInt();
+        System.out.print("Input minutes: ");
+        int minutes = scanner.nextInt();
+        System.out.print("Input seconds: ");
+        int seconds = scanner.nextInt();
+
+        int totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+
+        double metersPerSecond = (double) distance / totalSeconds;
+        double kilometersPerHour = (metersPerSecond * 3600) / 1000;
+        double milesPerHour = (metersPerSecond * 3600) / 1609;
+
+        System.out.println("Your speed in meters/second is " + metersPerSecond);
+        System.out.println("Your speed in km/h is " + kilometersPerHour);
+        System.out.println("Your speed in miles/h is " + milesPerHour);
+    }
+}
+
+10 Write a program to accept a number as input and print EVEN if it is an even number and ODD if it is an odd number.
+Sample input 1
+6789 
+sample output 1
+ODD
+
+import java.util.Scanner;
+
+public class EvenOrOdd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        if (number % 2 == 0) {
+            System.out.println("EVEN");
+        } else {
+            System.out.println("ODD");
+        }
+    }
+}
+
+11 Write a program to accept 3 numbers as input and print the greatest of the 3 numbers.
+Sample input 1 1 2 3
+Sample output 1 3
+import java.util.Scanner;
+
+public class GreatestOfThree {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter three numbers: ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+
+        int greatest = Math.max(num1, Math.max(num2, num3));
+        System.out.println("Greatest number: " + greatest);
+    }
+}
+
+
+12 Write a program to accept 4 numbers as input and sequence them in the ascending order.You may assume that the numbers will not be equal.
+Sample input 1 234 237 235 232 
+sample output 1 232<234<235<237
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class SequenceInAscendingOrder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter four numbers: ");
+        int[] numbers = new int[4];
+        for (int i = 0; i < 4; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        Arrays.sort(numbers);
+        System.out.println("Numbers in ascending order: " + numbers[0] + "<" + numbers[1] + "<" + numbers[2] + "<" + numbers[3]);
+    }
+}
+
+
+13 Write a program to accept to print the characters from A to Z once.
+
+public class PrintAtoZ {
+    public static void main(String[] args) {
+        for (char c = 'A'; c <= 'Z'; c++) {
+            System.out.print(c + " ");
+        }
+    }
+}
+
+
+14 Write a program to print the values from 1 to given N.
+Sample input 5
+Sample output 1 2 3 4 5
+
+import java.util.Scanner;
+
+public class PrintValues {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the value of N: ");
+        int N = scanner.nextInt();
+
+        for (int i = 1; i <= N; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+
+15 Write a program to print only the odd numbers till given N
+Sample input 15
+Sample output 0 2 4 6 8 10 12 14
+
+import java.util.Scanner;
+
+public class PrintOddNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the value of N: ");
+        int N = scanner.nextInt();
+
+        for (int i = 0; i <= N; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+
+
+
+ 
