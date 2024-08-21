@@ -1,0 +1,113 @@
+
+1.Write a program to accept N values into an integer array and display the contents
+import java.util.Scanner;
+class DisplayArr {
+    public static void main(String[] args) {
+       int size;
+        Scanner sc = new Scanner(System.in);  
+       size=sc.nextInt();
+       System.out.println("Enter Array elements");
+       int arr[] = new int[size];  
+        for(int ind = 0; ind < size; ind++)
+            arr[ind] = sc.nextInt();
+        for(int num:arr)
+        System.out.print(num+" ");
+        
+        
+       }
+}
+
+2.Write a program to accept N values into an integer array and display in the reverse order.
+import java.util.Scanner;
+class Rev_Displayarr {
+    public static void main(String[] args) {
+       int size;
+        Scanner sc = new Scanner(System.in);  
+       size=sc.nextInt();
+       System.out.println("Enter Array elements");
+       int arr[] = new int[size];  
+        for(int ind = 0; ind < size; ind++)
+            arr[ind] = sc.nextInt();
+        for(int ind = size-1; ind >=0; ind--)
+        System.out.print(arr[ind]+" ");
+        
+        
+       }
+}
+
+
+3. Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.
+import java.util.Scanner;
+class lesserthankey {
+    public static void main(String[] args) {
+       int size,key,count=0;
+       Scanner sc = new Scanner(System.in);  
+       size=sc.nextInt();
+       System.out.println("Enter Key element");
+       key=sc.nextInt();
+       System.out.println("Enter Array elements");
+       int arr[] = new int[size];  
+       for(int ind = 0; ind < size; ind++)
+        	arr[ind] = sc.nextInt();
+	   for(int ind = 0; ind < size; ind++)
+       {
+           if(arr[ind]<key)
+           count++;
+       }
+	    System.out.print(count);
+       }
+}
+
+
+4.Write a program to find minimum of the array .
+import java.util.Scanner;
+class MinElement {
+    public static void main(String[] args) {
+       int size;
+        Scanner sc = new Scanner(System.in);  
+       size=sc.nextInt();
+       System.out.println("Enter Array elements");
+       int arr[] = new int[size];  
+        for(int ind = 0; ind < size; ind++)
+            arr[ind] = sc.nextInt();
+        int min=arr[0];
+	for(int ind = 1; ind < size; ind++)
+        {
+	if(min>arr[ind])
+	min=arr[ind];
+	}
+	System.out.print(min);
+        
+        
+       }
+}
+
+
+5.Write a program to find sum of the array 
+
+import java.util.Scanner;
+class SumoftheArr {
+    public static void main(String[] args) {
+       int size,sum=0;
+        Scanner sc = new Scanner(System.in);  
+       size=sc.nextInt();
+       System.out.println("Enter Array elements");
+       int arr[] = new int[size];  
+        for(int ind = 0; ind < size; ind++)
+        {
+	arr[ind] = sc.nextInt();
+	sum+=arr[ind];
+	}
+        System.out.print(sum);
+       }
+}
+6.Write a program to search an element in the given array and print the searched elements index. If no such elements were found print -1
+7.You are given an array of 0s and 1s in random order. Segregate 0s on left side and 1s on right side of the array . 
+Input array   =  [0, 1, 0, 1, 0, 0, 1, 1, 1, 0] 
+Output array =  [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] 
+8.Write a program  to replace the array elements with sum of other  elements.
+9.Write a program  to insert the value at given position in the array.
+10.Write a program  to delete the value at given position from the array.
+
+
+
