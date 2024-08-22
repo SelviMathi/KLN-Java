@@ -1,0 +1,272 @@
+1. Print the following pattern
+*****
+*****
+*****
+*****
+*****
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	        for(col=1;col<=limit;col++)
+	      	    System.out.print("*");
+	      	    System.out.println();
+	    }
+}
+}
+
+2. Print the following pattern
+11111
+22222
+33333
+44444
+55555
+******************************************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	        for(col=1;col<=limit;col++)
+	      	    System.out.printf("%d",row);
+	      	    System.out.println();
+	    }
+}
+}
+3. Print the following pattern
+12345
+12345
+12345
+12345
+12345
+******************************************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	        for(col=1;col<=limit;col++)
+	      	    System.out.printf("%d",col);
+	      	    System.out.println();
+	    }
+}
+}
+
+4. Print the following pattern
+ABCDE
+ABCDE
+ABCDE
+ABCDE
+ABCDE
+/******************************************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	        int val=65;
+	       for(col=1;col<=limit;col++)
+	          System.out.printf("%c",val++);
+	    System.out.println();
+	    }
+}
+}
+5. Print the following pattern
+ABCDE
+FGHIJ
+KLMNO
+PQRST
+UVWXY
+/******************************************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    
+int val=65;
+for(row=1;row<=limit;row++)
+	    {
+       for(col=1;col<=limit;col++)
+	          System.out.printf("%c",val++);
+	    System.out.println();
+	    }
+}
+}
+
+6. Print the following pattern
+1
+22
+333
+4444
+55555
+/******************************************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	        
+	       for(col=1;col<=row;col++)
+	          System.out.printf("%d",row);
+	    System.out.println();
+	    }
+}
+}
+7.Print the following pattern
+    1
+   12
+  123
+ 1234
+12345
+/******************************************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	       for(col=1;col<=limit-row;col++)
+	          System.out.printf(" ");
+	       for(col=1;col<=row;col++)
+	          System.out.printf("%d",col);
+	    System.out.println();
+	    }
+}
+}
+8.Print the following pattern
+*
+* *
+*   *
+*      *
+* * * * *
+
+/******************************************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	       for(col=1;col<=row;col++)
+	       {
+	           if(col==1 || row==col || row==limit)
+	          System.out.printf("*");
+	          else
+	          System.out.printf(" ");
+	       } 
+	    System.out.println();
+	    }
+}
+}
+
+9.Print the following pattern
+11111
+
+10001
+
+10001
+
+10001
+
+11111
+
+/******************************************************************************
+
+      import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	       for(col=1;col<=limit;col++)
+	       {
+	       if(col==1 || row==1 || row == limit || col == limit)
+	          System.out.printf("1");
+	          else
+	          System.out.printf("0");
+	       } 
+	    System.out.println();
+	    }
+}
+}
+
+10.Print the following pattern
+*        *
+**      **
+***    ***
+****  ****
+**********
+****  ****
+***    ***
+**      **
+*        *
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int limit,row,col;
+	    Scanner obj = new Scanner(System.in);
+	    limit=obj.nextInt();
+	    for(row=1;row<=limit;row++)
+	    {
+	       for(col=1;col<=row;col++)
+	          System.out.printf("*");
+           for(col=1;col<=2*(limit-row);col++)
+	          System.out.printf(" ");
+	       for(col=1;col<=row;col++)
+	          System.out.printf("*");
+	    System.out.println();
+	    }
+	    for(row=limit-1;row>=1;row--)
+	    {
+	       for(col=1;col<=row;col++)
+	          System.out.printf("*");
+           for(col=1;col<=2*(limit-row);col++)
+	          System.out.printf(" ");
+	       for(col=1;col<=row;col++)
+	          System.out.printf("*");
+	    System.out.println();
+	    }
+}
+}
