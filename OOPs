@@ -1,0 +1,251 @@
+https://www.hackerrank.com/challenges/java-inheritance-1/problem
+
+
+1.Creating object for class
+
+
+public class Main
+{
+	int num=10;
+	public static void main(String[] args) {
+	    
+	    Main obj=new Main();
+		System.out.println(obj.num);
+	}
+}
+
+2.Modifying Attribute
+
+
+public class Main
+{
+	int num=10;
+	public static void main(String[] args) {
+	    
+	    Main obj=new Main();
+		obj.num=25;
+		System.out.println(obj.num);
+	}
+}
+
+3.Dont MOdify
+
+
+public class Main
+{
+	final int num=10;
+	public static void main(String[] args) {
+	    
+	    Main obj=new Main();
+		obj.num=25;
+		System.out.println(obj.num);
+	}
+}
+
+4.Multiple Attributes
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj1 = new Main();  // Object 1
+    Main myObj2 = new Main();  // Object 2
+    myObj2.x = 25;
+    System.out.println(myObj1.x);  // Outputs 5
+    System.out.println(myObj2.x);  // Outputs 25
+  }
+}
+
+
+5.Anonymous object
+
+public class Main {
+  void fact(int num)
+  {
+      int fact=1;
+      for(int i=1;i<=num;i++)
+       fact*=i;
+      System.out.print(fact);
+  }
+  public static void main(String[] args) {
+   new Main().fact(5);
+  }
+}
+
+6.Multiple classes
+
+	class Student{  
+	 int id;  
+	 String name;  
+	}  
+	class Main{  
+	 public static void main(String args[]){  
+	  Student s1=new Student();  
+	  System.out.println(s1.id);  
+	  System.out.println(s1.name);  
+	 }  
+	}  
+7.
+Inner clas
+class OuterClass {
+  int x = 10;
+  class InnerClass {
+    int y = 5;
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+8.
+Inheritance
+	class Employee{  
+	 float salary=40000;  
+	}  
+	class Programmer extends Employee{  
+	 int bonus=10000;  
+	 public static void main(String args[]){  
+	   Programmer p=new Programmer();  
+	   System.out.println("Programmer salary is:"+p.salary);  
+	   System.out.println("Bonus of Programmer is:"+p.bonus);  
+	}  
+	}   
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+ class FitnessTracker {
+
+  public void walk() {
+    System.out.println("Recording steps...");
+  }
+}
+
+ class RunningWatch extends FitnessTracker {
+
+  public void run() {
+    System.out.println("Recording distance...");
+  }
+}
+public class Solution{
+
+  public static void main(String[] args) {
+    RunningWatch watch = new RunningWatch();
+    watch.run();
+    watch.walk();
+  }
+}
+
+
+
+Multilevel
+class Animal {
+  String name;
+
+  public void breathe() {
+    System.out.println(name + " is breathing.");
+  }
+
+  public void eat() {
+    System.out.println(name + " is eating.");
+  }
+}
+
+class Herbivore extends Animal {
+  String diet = "plants";
+
+  @Override // Override symbol indicates redefining inherited method
+  public void eat() {
+    System.out.println(name + " is eating " + diet + ".");
+  }
+}
+
+class Deer extends Herbivore {
+  String species = "deer";
+
+  public void graze() {
+    System.out.println(name + " (" + species + ") is grazing.");
+  }
+}
+
+ class Main {
+  public static void main(String[] args) {
+    Deer fawn = new Deer();
+    fawn.name = "Bambi";
+    fawn.breathe();  // Inherited from Animal
+    fawn.eat();      // Overridden in Herbivore
+    fawn.graze();     // Specific method of Deer
+  }
+}
+
+
+
+
+
+Hierarchical
+ class Vehicle {
+  String color;
+  int maxSpeed;
+
+  public void startEngine() {
+    System.out.println("Vehicle engine starting..."); // Placeholder for car
+  }
+
+  public void accelerate() {
+    System.out.println("Vehicle accelerating..."); // Placeholder for car
+  }
+}
+
+ class Car extends Vehicle {
+  int numDoors;
+
+  @Override
+  public void startEngine() {
+    System.out.println("Car engine starting (vroom!)");
+  }
+
+  @Override
+  public void accelerate() {
+    System.out.println("Car accelerating (increasing speed)...");
+  }
+}
+
+ class Bicycle extends Vehicle {
+  boolean hasGears;
+
+  @Override
+  public void startEngine() {
+    System.out.println("Bicycle doesn't have an engine. Ready to pedal!");
+  }
+
+  @Override
+  public void accelerate() {
+    System.out.println("Bicycle accelerating (pedaling faster)...");
+  }
+}
+
+ class Main {
+  public static void main(String[] args) {
+    Car car = new Car();
+    car.color = "red";
+    car.numDoors = 4;
+    car.startEngine();
+    car.accelerate();
+
+    System.out.println();
+
+    Bicycle bicycle = new Bicycle();
+    bicycle.color = "blue";
+    bicycle.hasGears = true;
+    bicycle.startEngine();
+    bicycle.accelerate();
+  }
+}
